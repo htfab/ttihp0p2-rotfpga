@@ -137,11 +137,11 @@ class Cells:
         for y in range(self.height):
             l = [''] * 5
             for x in range(self.width):
-                l[0] += f'+--{self.out_t(y, x)}--{self.in_t(y, x)}--+'
-                l[1] += f'{self.in_l(y, x)}> A{self.r_gnl(y,x)}{self.r_ghl(y, x)}V >{self.out_r(y, x)}'
-                l[2] += f'|   {self.config_val(y, x)}{self.out_sc(y, x)}   |'
-                l[3] += f'{self.out_l(y, x)}< A  V <{self.in_r(y, x)}'
-                l[4] += f'+--{self.in_b(y, x)}--{self.out_b(y, x)}--+'
+                l[0] += f'+--{self.out_t(y, x).value}--{self.in_t(y, x).value}--+'
+                l[1] += f'{self.in_l(y, x).value}> A{self.r_gnl(y,x).value}{self.r_ghl(y, x).value}V >{self.out_r(y, x).value}'
+                l[2] += f'|   {self.config_val(y, x)}{self.out_sc(y, x).value}   |'
+                l[3] += f'{self.out_l(y, x).value}< A  V <{self.in_r(y, x).value}'
+                l[4] += f'+--{self.in_b(y, x).value}--{self.out_b(y, x).value}--+'
             r.extend(l)
         return '\n'.join(r)
 

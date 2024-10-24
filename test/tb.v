@@ -14,15 +14,15 @@ module tb ();
   end
 
   // wire up the inputs and outputs
-  reg  clk;
-  reg  rst_n;
-  reg  ena;
-  reg  in_se;
-  reg  in_sc;
-  reg  [1:0] in_cfg;
-  reg  in_lb;
-  reg  [1:0] in_lbc;
-  reg  [7:0] ui_in;
+  reg clk;
+  reg rst_n;
+  reg ena;
+  reg in_se;
+  reg in_sc;
+  reg [1:0] in_cfg;
+  reg in_lb;
+  reg [1:0] in_lbc;
+  reg [7:0] ui_in;
 
   wire [7:0] uio_in;
   assign uio_in[0] = in_se;
